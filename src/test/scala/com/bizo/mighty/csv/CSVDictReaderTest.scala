@@ -1,12 +1,12 @@
 package com.bizo.mighty.csv
 
 import org.scalatest.{ WordSpec, BeforeAndAfterAll }
-import org.scalatest.matchers.ShouldMatchers
+import org.scalatest.Matchers
 import collection.JavaConversions._
 import com.bizo.mighty.collection.ConsecutivelyGroupable._
 
 @org.junit.runner.RunWith(classOf[org.scalatest.junit.JUnitRunner])
-class CSVDictReaderTest extends WordSpec with ShouldMatchers with BeforeAndAfterAll {
+class CSVDictReaderTest extends WordSpec with Matchers with BeforeAndAfterAll {
 
   "CSVDictReader" should {
     "bind columns to headers" in {

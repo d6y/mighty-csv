@@ -1,12 +1,12 @@
 package com.bizo.mighty.csv
 
 import org.scalatest.{ WordSpec, BeforeAndAfterAll }
-import org.scalatest.matchers.ShouldMatchers
+import org.scalatest.Matchers
 import collection.JavaConversions._
 import com.bizo.mighty.collection.ConsecutivelyGroupable._
 
 @org.junit.runner.RunWith(classOf[org.scalatest.junit.JUnitRunner])
-class CSVReaderTest extends WordSpec with ShouldMatchers with BeforeAndAfterAll {
+class CSVReaderTest extends WordSpec with Matchers with BeforeAndAfterAll {
   import CSVReaderTest._
   import CSVReader._
 
@@ -71,7 +71,7 @@ class CSVReaderTest extends WordSpec with ShouldMatchers with BeforeAndAfterAll 
           // test grouped row validity
           eGroup zip group foreach {
             case (g1, g2) =>
-              g1 should be === g2
+              g1 should be(g2)
           }
       }
     }

@@ -1,13 +1,13 @@
 package com.bizo.mighty.csv
 
 import org.scalatest.{ WordSpec, BeforeAndAfterAll }
-import org.scalatest.matchers.ShouldMatchers
+import org.scalatest.Matchers
 import collection.JavaConversions._
 import java.io.StringWriter
 import au.com.bytecode.opencsv.{ CSVWriter => OpenCSVWriter }
 
 @org.junit.runner.RunWith(classOf[org.scalatest.junit.JUnitRunner])
-class CSVDictWriterTest extends WordSpec with ShouldMatchers with BeforeAndAfterAll {
+class CSVDictWriterTest extends WordSpec with Matchers with BeforeAndAfterAll {
   "CSVDictWriter" should {
     "properly write header row" in {
       val output = new StringWriter()
